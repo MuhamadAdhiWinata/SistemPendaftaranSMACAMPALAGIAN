@@ -16,8 +16,9 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html">Administrator</a>
+            <a class="navbar-brand ps-3" href="index.php">Administrator</a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -35,12 +36,12 @@
                         
                             if(isset($_GET['signout'])==1){
                                 session_destroy();
-                                echo "<script>window.location.href='https://sistempendaftaransmacampalagian.000webhostapp.com/page/admin/datasiswa.php'alert('sesi telah berakhir.');</script>";
+                                echo "<script>window.location.href='https://sistempendaftaransmacampalagian.000webhostapp.com/page/login.php';alert('Session Telah Berakhir.')</script>";
                                 exit();
                             } 
                         
                         ?>
-                        <li><a class="dropdown-item" href="?signout=1" onclick="return  confirm('Akhiri sesi dan keluar ?')">Logout</a></li>
+                        <li><a class="dropdown-item" href="?signout=1"onclick="return  confirm('Akhiri sesi dan keluar ?')">Logout</a></li>
                     </ul>
                 </li>
             </ul>
