@@ -26,10 +26,8 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $id = $_POST['id'];
 
-            // Database connection
             $conn = mysqli_connect("localhost", "root", "", "proyek_sistem");
 
-            // Check connection
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());
             }

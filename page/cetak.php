@@ -3,26 +3,22 @@ session_start();
 
 
 
-// Sambungkan ke database
+
 $conn = new mysqli("localhost", "root", "", "proyek_sistem");
 
-// Periksa koneksi
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Periksa apakah ID sudah diberikan
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 
-    // Query untuk mengambil data siswa berdasarkan ID
     $sql = "SELECT * FROM siswa WHERE ID = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id);
     $stmt->execute();
     $result = $stmt->get_result();
 
-    // Periksa apakah siswa ditemukan
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
     } else {
@@ -34,7 +30,6 @@ if (isset($_GET['id'])) {
     exit();
 }
 
-// Tutup koneksi database
 $conn->close();
 ?>
 

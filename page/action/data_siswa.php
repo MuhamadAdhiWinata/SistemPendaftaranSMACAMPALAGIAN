@@ -17,15 +17,12 @@
         </thead>
         <tbody>
             <?php
-            // Sambungkan ke database
             $conn = new mysqli("localhost", "root", "", "proyek_sistem");
 
-            // Periksa koneksi
             if ($conn->connect_error) {
                 die("Koneksi gagal: " . $conn->connect_error);
             }
 
-            // Query untuk mengambil data siswa
             $sql = "SELECT * FROM siswa";
             $result = $conn->query($sql);
 
@@ -52,8 +49,6 @@
                 echo "<tr><td colspan='12'>Tidak ada data siswa.</td></tr>";
             }
             
-
-            // Tutup koneksi database
             
             ?>
         </tbody>
