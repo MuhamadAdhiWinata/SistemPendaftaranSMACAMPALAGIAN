@@ -1,7 +1,6 @@
 <?php
 // Sambungkan ke database
-$conn = new mysqli("localhost", "id22353485_proyekpsi", "Proyekpsi.123456789", "id22353485_proyek_sistem
-");
+$conn = new mysqli("localhost", "id22353485_proyekpsi", "Proyekpsi.123456789", "id22353485_proyek_sistem");
 
 // Periksa koneksi
 if ($conn->connect_error) {
@@ -44,7 +43,7 @@ move_uploaded_file($dokumenIdentitasTmpName, $dokumenIdentitasPath);
 $sql = "INSERT INTO siswa (ID, Nama, TempatLahir,TanggalLahir, Alamat, NomorTelepon, Email, SekolahAsal, NilaiRapor, DokumenIdentitas, FotoSiswa, PilihanJurusan, is_accepted) VALUES ('$id', '$nama', '$tempatLahir', '$tanggalLahir', '$alamat', '$nomorTelepon', '$email', '$sekolahAsal', '$nilaiRapor', '$dokumenIdentitasPath', '$fotoSiswaPath', '$pilihanJurusan', '$is_accepted')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "<script>window.location.href='../datasiswa.php';alert('Data berhasil disimpan ke database.');</script>";
+    echo "<script>window.location.href='https://sistempendaftaransmacampalagian.000webhostapp.com/page/admin/datasiswa.php';alert('Data berhasil disimpan ke database.');</script>";
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
