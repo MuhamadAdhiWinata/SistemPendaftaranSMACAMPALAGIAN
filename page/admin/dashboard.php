@@ -35,7 +35,7 @@
                         
                             if(isset($_GET['signout'])==1){
                                 session_destroy();
-                                header("Location: ../login.php?signout=1");
+                                echo "<script>window.location.href='https://sistempendaftaransmacampalagian.000webhostapp.com/page/admin/datasiswa.php'alert('sesi telah berakhir.');</script>";
                                 exit();
                             } 
                         
