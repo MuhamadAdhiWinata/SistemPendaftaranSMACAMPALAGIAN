@@ -26,7 +26,7 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $id = $_POST['id'];
 
-            $conn = mysqli_connect("localhost", "root", "", "proyek_sistem");
+            $conn = mysqli_connect("localhost", "id22353485_proyekpsi", "Proyekpsi.123456789", "id22353485_proyek_sistem");
 
             if (!$conn) {
                 die("Connection failed: " . mysqli_connect_error());

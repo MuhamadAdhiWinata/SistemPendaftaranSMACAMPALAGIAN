@@ -2,7 +2,7 @@
   session_start();
 
   // Sambungkan ke database
-$conn = new mysqli("localhost", "root", "", "proyek_sistem");
+$conn = new mysqli("localhost", "id22353485_proyekpsi", "Proyekpsi.123456789", "id22353485_proyek_sistem");
 
 // Periksa koneksi
 if ($conn->connect_error) {

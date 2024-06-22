@@ -4,7 +4,8 @@ session_start();
 
 
 
-$conn = new mysqli("localhost", "root", "", "proyek_sistem");
+$conn = new mysqli("localhost", "id22353485_proyekpsi
+", "Proyekpsi.123456789", "id22353485_proyek_sistem");
 
 if ($conn->connect_error) {
     die("Koneksi gagal: " . $conn->connect_error);

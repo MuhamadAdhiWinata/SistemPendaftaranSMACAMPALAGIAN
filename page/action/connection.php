@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
-$db = 'proyek_sistem';
-$user = 'root';
-$pass = '';
+$db = 'id22353485_proyek_sistem';
+$user = 'id22353485_proyekpsi';
+$pass = 'Proyekpsi.123456789';
 
 // Buat koneksi
 $conn = new mysqli($host, $user, $pass, $db);
