@@ -43,8 +43,7 @@ move_uploaded_file($dokumenIdentitasTmpName, $dokumenIdentitasPath);
 $sql = "INSERT INTO siswa (ID, Nama, TempatLahir,TanggalLahir, Alamat, NomorTelepon, Email, SekolahAsal, NilaiRapor, DokumenIdentitas, FotoSiswa, PilihanJurusan, is_accepted) VALUES ('$id', '$nama', '$tempatLahir', '$tanggalLahir', '$alamat', '$nomorTelepon', '$email', '$sekolahAsal', '$nilaiRapor', '$dokumenIdentitasPath', '$fotoSiswaPath', '$pilihanJurusan', '$is_accepted')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Data berhasil disimpan ke database.";
-} else {
+    echo "<script>window.location.href='../datasiswa.php';alert('Data berhasil disimpan ke database.');</script>";
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
